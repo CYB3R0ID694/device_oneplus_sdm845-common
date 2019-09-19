@@ -355,6 +355,11 @@
     <!-- Is the device capable of hot swapping an ICC Card -->
     <bool name="config_hotswapCapable">true</bool>
 
+    <!-- Radius of the software rounded corners at the top and bottom of the display in its
+        natural orientation. If zero, the value of rounded_corner_radius is used. -->
+    <dimen name="rounded_corner_radius_top">84.0px</dimen>
+    <dimen name="rounded_corner_radius_bottom">68.0px</dimen>
+
     <!-- True if the device supports Sustained Performance Mode-->
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
 
