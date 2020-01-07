@@ -15,7 +15,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           android:sharedUserId="android.uid.system"
-          package="com.aosip.device.DeviceSettings"
+          package="org.candy.device.DeviceSettings"
           android:versionCode="1"
           android:versionName="1.0" >
 
@@ -53,7 +53,7 @@
         <activity android:name=".KeyHandler" />
 
         <activity
-            android:name="com.aosip.device.DeviceSettings.PanelSettingsActivity"
+            android:name="org.candy.device.DeviceSettings.PanelSettingsActivity"
             android:exported="true"
             android:label="@string/panel_category_title"
             android:launchMode="singleTask" >
@@ -63,7 +63,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name="com.aosip.device.DeviceSettings.Startup" >
+        <receiver android:name="org.candy.device.DeviceSettings.Startup" >
             <intent-filter android:priority="100" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
@@ -71,7 +71,7 @@
 
         <!-- Quick Settings Tiles -->
         <service
-            android:name="com.aosip.device.DeviceSettings.PanelModeTileService"
+            android:name="org.candy.device.DeviceSettings.PanelModeTileService"
             android:icon="@drawable/ic_panel_tile"
             android:label="@string/tile_panel_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -81,7 +81,7 @@
             </intent-filter>
         </service>
         <service
-            android:name="com.aosip.device.DeviceSettings.HBMModeTileService"
+            android:name="org.candy.device.DeviceSettings.HBMModeTileService"
             android:icon="@drawable/ic_hbm_tile"
             android:label="@string/tile_hbm_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -92,7 +92,7 @@
         </service>
 
         <service
-            android:name="com.aosip.device.DeviceSettings.DCModeTileService"
+            android:name="org.candy.device.DeviceSettings.DCModeTileService"
             android:icon="@drawable/ic_dc_tile"
             android:label="@string/tile_dc_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -105,7 +105,7 @@
         <!-- Search Provider -->
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
-            android:authorities="com.aosip.device"
+            android:authorities="org.candy.device"
             android:multiprocess="false"
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"
