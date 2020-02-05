@@ -28,13 +28,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-candy
 
-PRODUCT_OnePlusIconShapeCircleOverlay += \
-    PACKAGES \
-    OnePlusIconShapeRoundedRectOverlay \
-    OnePlusIconShapeSquareOverlay \
-    OnePlusIconShapeSquircleOverlay \
-    OnePlusIconShapeTeardropOverlay
-
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # VNDK
