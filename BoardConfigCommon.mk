@@ -118,6 +118,9 @@ BOARD_ROOT_EXTRA_FOLDERS := op1 op2 op_odm
 # Telephony
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
+# SurfaceFlinger
+TARGET_USE_AOSP_SURFACEFLINGER := true
+
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 
