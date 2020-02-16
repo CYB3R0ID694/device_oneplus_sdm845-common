@@ -9,7 +9,7 @@
   },
   {
     "repository"  : "vendor_addons_oneplus_camera",
-    "branch"      : "gallery",
+    "branch"      : "sdm845",
     "clone-depth" : "1",
     "target_path" : "vendor/addons/oneplus/camera"
   },
