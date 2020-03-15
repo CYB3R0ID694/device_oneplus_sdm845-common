@@ -65,8 +65,6 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name="org.candy.device.DeviceSettings.Startup" >
-
         <activity
             android:name=".TouchscreenGestureSettings"
             android:label="@string/touchscreen_gesture_settings_title"
