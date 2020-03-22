@@ -1,0 +1,2 @@
+# Allow ueventd to read debugfs dir
+allow ueventd debugfs:dir read;
