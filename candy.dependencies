@@ -4,6 +4,10 @@
     "target_path" : "kernel/oneplus/sdm845"
   },
   {
+    "repository"  : "vendor_google_camera",
+    "target_path" : "vendor/google/camera"
+  },
+  {
     "repository"  : "SecretIngredients/vendor_oneplus",
     "target_path" : "vendor/oneplus"
   }
