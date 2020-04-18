@@ -23,16 +23,13 @@ $(call inherit-product, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
 # Inherit packages from vendor/google/camera
 $(call inherit-product, vendor/google/camera/config.mk)
 
-# Inherit packages from vendor/oneplus/camera
-$(call inherit-product, vendor/oneplus/camera/config.mk)
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-candy
 
-PRODUCT_PACKAGES += \
-    OnePlusIconShapeCircleOverlay \
+PRODUCT_OnePlusIconShapeCircleOverlay += \
+    PACKAGES \
     OnePlusIconShapeRoundedRectOverlay \
     OnePlusIconShapeSquareOverlay \
     OnePlusIconShapeSquircleOverlay \
