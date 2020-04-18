@@ -4,7 +4,7 @@
     "target_path" : "kernel/oneplus/sdm845"
   },
   {
-    "repository"  : "vendor_oneplus",
+    "repository"  : "SecretIngredients/vendor_oneplus",
     "target_path" : "vendor/oneplus"
   }
 ]
