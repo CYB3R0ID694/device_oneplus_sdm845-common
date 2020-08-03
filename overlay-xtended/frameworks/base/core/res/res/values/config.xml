@@ -26,9 +26,6 @@
     <!-- The CPU temperature sensor path, defaults to empty -->
     <string name="config_cpuTempSensor" translatable="false">/sys/class/thermal/thermal_zone0/temp</string>
     
-    <!-- The CPU temperature divider, if needed -->
-    <integer name="config_cpuTempDivider" translatable="false">0.001</integer>
-
     <!-- Target DeviceSettings -->
     <string name="config_device_parts_package_name" translatable="false">org.msm.xtended.device.DeviceSettings</string>
     <string name="config_device_parts_package_activity" translatable="false">org.msm.xtended.device.DeviceSettings.DeviceSettingsActivity</string>
