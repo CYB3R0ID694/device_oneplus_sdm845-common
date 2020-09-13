@@ -48,10 +48,10 @@ import androidx.preference.TwoStatePreference;
 import com.colt.device.DeviceSettings.FileUtils;
 import com.colt.device.DeviceSettings.speaker.ClearSpeakerActivity;
 import com.colt.device.DeviceSettings.preferences.CustomSeekBarPreference;
-import com.colt.device.device.DeviceSettings.R;
-import com.colt.device.device.DeviceSettings.SuShell;
-import com.colt.device.device.DeviceSettings.SuTask;
-import com.colt.device.device.DeviceSettings.thermal.ThermalActivity;
+import com.colt.device.DeviceSettings.R;
+import com.colt.device.DeviceSettings.SuShell;
+import com.colt.device.DeviceSettings.SuTask;
+import com.colt.device.DeviceSettings.thermal.ThermalActivity;
 
 
 public class DeviceSettings extends PreferenceFragment

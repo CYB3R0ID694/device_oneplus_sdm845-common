@@ -83,7 +83,7 @@
         </activity>
 
         <activity
-            android:name="org.msm.xtended.device.DeviceSettings.thermal.ThermalActivity"
+            android:name="com.colt.device.DeviceSettings.thermal.ThermalActivity"
             android:exported="true"
             android:label="@string/thermal_title"
             android:launchMode="singleTask" >

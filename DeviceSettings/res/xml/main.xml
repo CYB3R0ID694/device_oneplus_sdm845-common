@@ -181,6 +181,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:title="@string/category_vibrator">
         <com.colt.device.DeviceSettings.VibratorStrengthPreference
             android:key="vib_strength"
             android:icon="@drawable/ic_vibration_icon"
