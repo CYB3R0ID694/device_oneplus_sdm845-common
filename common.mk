@@ -81,6 +81,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Camera
+PRODUCT_PACKAGES += \
+    libcvface_api
+
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.qcom.rc \
