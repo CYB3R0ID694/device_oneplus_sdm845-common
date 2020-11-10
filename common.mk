@@ -88,8 +88,8 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libcvface_api \
-    Snap
+    GoogleCamera \
+    libcvface_api 
 
 # OnePlus Camera HIDL
 #PRODUCT_PACKAGES += \
