@@ -84,6 +84,18 @@
             </intent-filter>
         </activity>
 
+        <!-- DeviceSettings Tile -->
+        <service
+            android:name="org.cherish.device.DeviceSettings.DeviceSettingsTileService"
+            android:icon="@drawable/ic_settings_device"
+            android:label="@string/device_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
         <!-- Panel Mode's tile -->
         <service
             android:name="org.cherish.device.DeviceSettings.PanelModeTileService"
