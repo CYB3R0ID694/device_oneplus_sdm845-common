@@ -7,3 +7,6 @@ init_daemon_domain(hal_touch_sdm845)
 # Allow access to gesture enable nodes
 allow hal_touch_sdm845 proc_touchpanel:dir search;
 allow hal_touch_sdm845 proc_touchpanel:file rw_file_perms;
+
+# hwservice context
+add_hwservice(hal_touch_sdm845, hal_lineage_touch_hwservice)
