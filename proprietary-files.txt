@@ -37,7 +37,6 @@ product/lib64/libdpmtcm.so
 
 # IMS
 lib64/libdiag_system.so
--product/priv-app/ims/ims.apk|4a603c60d02335193864909734d25244ae47209c
 product/lib64/libimscamera_jni.so
 product/lib64/libimsmedia_jni.so
 product/lib64/lib-imsvideocodec.so
@@ -62,6 +61,10 @@ framework/com.nxp.nfc.jar|41d92d0b7fdc3d50cd6ea4be8664614aa9d41823
 lib64/libnxpnfc_nci_jni.so
 lib64/libnxpnfc-nci.so|e31ab7b2b282c3b81fd13ab1b40b3cc8d90d8b5b
 
+# Telephony - from LA.UM.9.1.r1-07000-SM8150.0
+system_ext/framework/qti-telephony-common.jar|695214c1294dc9a79ee48387140c9907203300d7
+-system_ext/priv-app/ims/ims.apk|d2e1bb9b56805e08f6fb35bee8c1d59035904e27
+
 # Telephony
 etc/permissions/privapp-permissions-qti.xml
 etc/permissions/qti_libpermissions.xml
@@ -75,9 +78,6 @@ product/etc/permissions/telephonyservice.xml
 product/framework/qcrilhook.jar
 product/framework/QtiTelephonyServicelibrary.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-
-# Telephony (qti-telephony-common) - from DRG - QKQ1.190828.002
-product/framework/qti-telephony-common.jar|b4d187700f279cdbd40e74b4c3be4504f10d8b29
 
 # WiFi Display
 bin/wfdservice
