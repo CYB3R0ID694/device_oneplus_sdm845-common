@@ -21,9 +21,9 @@ set -e
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-COLT_ROOT="${MY_DIR}"/../../..
+KANGOS_ROOT="${MY_DIR}"/../../..
 
-HELPER="${COLT_ROOT}/vendor/colt/build/tools/extract_utils.sh"
+HELPER="${KANGOS_ROOT}/vendor/kangos/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -74,7 +74,7 @@ if [ -z "${SRC}" ]; then
 fi
 
 # Initialize the helper for common device
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${COLT_ROOT}" true "${CLEAN_VENDOR}"
+setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${KANGOS_ROOT}" true "${CLEAN_VENDOR}"
 
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"
@@ -82,13 +82,13 @@ extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
 if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
     source "${MY_DIR}/../${DEVICE}/extract-files.sh"
-    setup_vendor "${DEVICE}" "${VENDOR}" "${COLT_ROOT}" false "${CLEAN_VENDOR}"
+    setup_vendor "${DEVICE}" "${VENDOR}" "${KANGOS_ROOT}" false "${CLEAN_VENDOR}"
 
     extract "${MY_DIR}/../${DEVICE}/proprietary-files.txt" "${SRC}" \
             "${KANG}" --section "${SECTION}"
 fi
 
-COMMON_BLOB_ROOT="${COLT_ROOT}/vendor/${VENDOR}/${DEVICE_COMMON}/proprietary"
+COMMON_BLOB_ROOT="${KANGOS_ROOT}/vendor/${VENDOR}/${DEVICE_COMMON}/proprietary"
 
 sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${COMMON_BLOB_ROOT}/lib64/libwfdnative.so"
 

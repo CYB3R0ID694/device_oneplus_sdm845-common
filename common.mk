@@ -23,7 +23,7 @@ $(call inherit-product, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-colt
+    $(LOCAL_PATH)/overlay-kangos
 
 #PRODUCT_PACKAGES += \
 #    OnePlusIconShapeCircleOverlay \
@@ -195,9 +195,22 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RemovePackages
 
+#HALS
+SRC_AUDIO_HAL_DIR := hardware/qcom-caf/sdm845/audio
+SRC_DISPLAY_HAL_DIR := hardware/qcom-caf/sdm845/display
+SRC_MEDIA_HAL_DIR := hardware/qcom-caf/sdm845/media
+
 # Soong namespaces
+PRODUCT_BOARD_PLATFORM := sdm845
+PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/qcom-caf/sdm845/video \
+    hardware/qcom-caf/sdm845/audio \
+    hardware/qcom-caf/sdm845/media \
+    hardware/qcom-caf/wlan \
+    hardware/qcom-caf/thermal \
+    hardware/qcom-caf/common
 
 # Telephony
 PRODUCT_PACKAGES += \
