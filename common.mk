@@ -171,6 +171,13 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
+# OnePlus
+PRODUCT_PACKAGES += \
+    oneplus-fwk.oneplus_sdm845
+
+PRODUCT_BOOT_JARS += \
+    oneplus-fwk.oneplus_sdm845
+
 # Power
 PRODUCT_PACKAGES += \
     power.qcom:64
