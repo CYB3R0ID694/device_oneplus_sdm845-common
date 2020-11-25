@@ -89,7 +89,7 @@ PRODUCT_PACKAGES_DEBUG += \
 # Camera
 PRODUCT_PACKAGES += \
     GoogleCamera \
-    libcvface_api 
+    libcvface_api
 
 # OnePlus Camera HIDL
 #PRODUCT_PACKAGES += \
@@ -242,9 +242,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
-    
+
 # Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED := true    
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Wi-Fi
 PRODUCT_COPY_FILES += \
@@ -268,5 +268,5 @@ PRODUCT_COPY_FILES += \
 
 # Whitelisted app
 PRODUCT_COPY_FILES += \
-   $(LOCAL_PATH)/system_ext/etc/permissions/privapp-permissions-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-system_ext.xml 
-
+   $(LOCAL_PATH)/system_ext/etc/permissions/privapp-permissions-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-system_ext.xml \
+   $(LOCAL_PATH)/permissions/privapp-permissions-googlcam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-googlecam.xml
