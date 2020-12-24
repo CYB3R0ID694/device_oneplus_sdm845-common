@@ -21,9 +21,9 @@ set -e
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-EVO_ROOT="${MY_DIR}/../../.."
+CHERISH_ROOT="${MY_DIR}/../../.."
 
-HELPER="${EVO_ROOT}/vendor/evolution/build/tools/extract_utils.sh"
+HELPER="${CHERISH_ROOT}/vendor/cherish/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -31,7 +31,7 @@ fi
 source "${HELPER}"
 
 # Initialize the helper for common
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${EVO_ROOT}" true
+setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${CHERISH_ROOT}" true
 
 # Copyright headers and guards
 write_headers "enchilada fajita"
@@ -45,7 +45,7 @@ write_footers
 if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
     INITIAL_COPYRIGHT_YEAR="$DEVICE_BRINGUP_YEAR"
-    setup_vendor "${DEVICE}" "${VENDOR}" "${EVO_ROOT}" false
+    setup_vendor "${DEVICE}" "${VENDOR}" "${CHERISH_ROOT}" false
 
     # Copyright headers and guards
     write_headers

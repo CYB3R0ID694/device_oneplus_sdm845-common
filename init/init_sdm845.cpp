@@ -136,11 +136,6 @@ void vendor_load_properties()
        // Property Overrides
        property_override("ro.control_privapp_permissions", "log");
 
-       // Common maintainer props
-       property_override("org.evolution.build_donate_url", "https://www.paypal.com/paypalme/ChanduDyavanapelli");
-       property_override("org.evolution.build_maintainer", "Chandu");
-       property_override("org.evolution.build_support_url", "https://t.me/EvolutionXOnePlus");
-
        // Workaround SafetyNet
        workaround_snet_properties();
 }

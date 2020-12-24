@@ -21,9 +21,9 @@ set -e
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-EVO_ROOT="${MY_DIR}"/../../..
+CHERISH_ROOT="${MY_DIR}"/../../..
 
-HELPER="${EVO_ROOT}/vendor/evolution/build/tools/extract_utils.sh"
+HELPER="${CHERISH_ROOT}/vendor/cherish/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -74,7 +74,7 @@ if [ -z "${SRC}" ]; then
 fi
 
 # Initialize the helper for common device
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${EVO_ROOT}" true "${CLEAN_VENDOR}"
+setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${CHERISH_ROOT}" true "${CLEAN_VENDOR}"
 
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"
@@ -82,11 +82,11 @@ extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
 if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
     source "${MY_DIR}/../${DEVICE}/extract-files.sh"
-    setup_vendor "${DEVICE}" "${VENDOR}" "${EVO_ROOT}" false "${CLEAN_VENDOR}"
+    setup_vendor "${DEVICE}" "${VENDOR}" "${CHERISH_ROOT}" false "${CLEAN_VENDOR}"
 
     extract "${MY_DIR}/../${DEVICE}/proprietary-files.txt" "${SRC}" \
             "${KANG}" --section "${SECTION}"
 fi
 
-COMMON_BLOB_ROOT="${EVO_ROOT}/vendor/${VENDOR}/${DEVICE_COMMON}/proprietary"
+COMMON_BLOB_ROOT="${CHERISH_ROOT}/vendor/${VENDOR}/${DEVICE_COMMON}/proprietary"
 "${MY_DIR}/setup-makefiles.sh"
