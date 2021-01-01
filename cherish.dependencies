@@ -8,10 +8,10 @@
     "target_path" : "vendor/oneplus"
   },
   {
-    "repository"  : "vendor_addons_oneplus_camera",
+    "repository"  : "vendor_addons_oneplus_apps",
     "branch"      : "sdm845",
     "clone-depth" : "1",
-    "target_path" : "vendor/addons/oneplus/camera"
+    "target_path" : "vendor/addons/oneplus/apps"
   },
   {
     "repository"  : "kdrag0n/proton-clang",
