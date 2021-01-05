@@ -19,7 +19,6 @@ LOCAL_REQUIRED_MODULES := \
 LOCAL_SHARED_LIBRARIES := \
     libhardware \
     libhidlbase \
-    libhidltransport \
     liblog \
     android.hardware.light@2.0
 
