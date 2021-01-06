@@ -6,7 +6,7 @@
   {
     "repository"  : "vendor_google_camera",
     "target_path" : "vendor/google/camera",
-    "branch"      : "c10-fajita"
+    "branch"      : "c11-fajita"
   },
   {
     "repository"  : "SecretIngredients/vendor_oneplus",
