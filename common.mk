@@ -84,6 +84,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    Snap \
     libcvface_api
 
 # Common init scripts
@@ -107,7 +108,7 @@ PRODUCT_PACKAGES += \
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport \
-    libhwbinder \
+    libhwbinder
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \

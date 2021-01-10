@@ -24,7 +24,6 @@ cc_binary {
     ],
     shared_libs: [
         "libbase",
-        "libbinder",
         "libhidlbase",
         "libutils",
         "vendor.lineage.touch@1.0",
