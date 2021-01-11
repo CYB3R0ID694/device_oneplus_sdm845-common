@@ -15,6 +15,4 @@
 
     <color name="primary_color">@*android:color/notification_material_background_color</color>
 
-    <color name="disabled_text_color">#66000000</color>
-
 </resources>

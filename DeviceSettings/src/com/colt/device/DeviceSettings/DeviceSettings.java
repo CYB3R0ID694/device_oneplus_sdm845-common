@@ -47,7 +47,6 @@ import androidx.preference.TwoStatePreference;
 
 import com.colt.device.DeviceSettings.FileUtils;
 import com.colt.device.DeviceSettings.speaker.ClearSpeakerActivity;
-import com.colt.device.DeviceSettings.preferences.CustomSeekBarPreference;
 
 public class DeviceSettings extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -61,13 +60,6 @@ public class DeviceSettings extends PreferenceFragment
     public static final String KEY_WIDE_SWITCH = "wide";
     private static final String PREF_CLEAR_SPEAKER = "clear_speaker_settings";
     public static final String KEY_FPS_INFO = "fps_info";
-
-    public static final String PREF_MICROPHONE_GAIN = "microphone_gain";
-    public static final String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
-    public static final String PREF_EARPIECE_GAIN = "earpiece_gain";
-    public static final String EARPIECE_GAIN_PATH = "/sys/kernel/sound_control/earpiece_gain";
-    public static final String PREF_SPEAKER_GAIN = "speaker_gain";
-    public static final String SPEAKER_GAIN_PATH = "/sys/kernel/sound_control/speaker_gain";
 
     public static final String KEY_VIBSTRENGTH = "vib_strength";
     private VibratorStrengthPreference mVibratorStrength;
@@ -84,9 +76,6 @@ public class DeviceSettings extends PreferenceFragment
     private ListPreference mBottomKeyPref;
     private Preference mClearSpeakerPref;    
     private static SwitchPreference mFpsInfo;
-    private CustomSeekBarPreference mMicrophoneGain;
-    private CustomSeekBarPreference mEarpieceGain;
-    private CustomSeekBarPreference mSpeakerGain;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -148,16 +137,6 @@ public class DeviceSettings extends PreferenceFragment
             startActivity(intent);
             return true;
         });
-
-        mMicrophoneGain = (CustomSeekBarPreference) findPreference(PREF_MICROPHONE_GAIN);
-        mMicrophoneGain.setOnPreferenceChangeListener(this);
-
-        mEarpieceGain = (CustomSeekBarPreference) findPreference(PREF_EARPIECE_GAIN);
-        mEarpieceGain.setOnPreferenceChangeListener(this);
-
-        mSpeakerGain = (CustomSeekBarPreference) findPreference(PREF_SPEAKER_GAIN);
-        mSpeakerGain.setOnPreferenceChangeListener(this);
-
     }
 
     @Override
@@ -175,12 +154,6 @@ public class DeviceSettings extends PreferenceFragment
             SharedPreferences.Editor prefChange = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
             prefChange.putBoolean(KEY_AUTO_HBM_SWITCH, enabled).commit();
             Utils.enableService(getContext());
-        } else if (preference == mMicrophoneGain) {    
-            FileUtils.setValue(MICROPHONE_GAIN_PATH, newValue + " " + newValue);       
-        } else if (preference == mEarpieceGain) {    
-            FileUtils.setValue(EARPIECE_GAIN_PATH, newValue + " " + newValue);       
-        } else if (preference == mSpeakerGain) {    
-            FileUtils.setValue(SPEAKER_GAIN_PATH, newValue + " " + newValue);       
         } else {
             Constants.setPreferenceInt(getContext(), preference.getKey(), Integer.parseInt((String) newValue));
         }
