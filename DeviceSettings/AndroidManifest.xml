@@ -133,18 +133,6 @@
             </intent-filter>
         </service>
 
-        <!-- FPS overlay tile -->
-        <service
-            android:name=".FPSTileService"
-            android:icon="@drawable/ic_fps"
-            android:label="@string/fps_info_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-
         <!-- Thermal profiles tile -->
         <service
             android:name="com.colt.device.DeviceSettings.thermal.ThermalTileService"
