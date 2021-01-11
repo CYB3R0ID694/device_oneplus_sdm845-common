@@ -163,22 +163,6 @@
           android:entries="@array/notification_slider_action_entries"
           android:entryValues="@array/notification_slider_action_entry_values" />
     </PreferenceCategory>
-    
-    <PreferenceCategory
-        android:key="thermal"
-        android:title="@string/thermal_title">
-
-        <Preference
-            android:key="thermal_profiles"
-            android:icon="@drawable/ic_thermal"
-            android:title="@string/thermal_profiles_title"
-            android:summary="@string/thermal_summary"
-            android:persistent="false" >
-            <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.colt.device.device.DeviceSettings.thermal"
-                    android:targetClass="com.colt.device.device.DeviceSettings.thermal.ThermalActivity" />
-        </Preference>
-    </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/category_vibrator">

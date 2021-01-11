@@ -48,11 +48,6 @@ import androidx.preference.TwoStatePreference;
 import com.colt.device.DeviceSettings.FileUtils;
 import com.colt.device.DeviceSettings.speaker.ClearSpeakerActivity;
 import com.colt.device.DeviceSettings.preferences.CustomSeekBarPreference;
-import com.colt.device.DeviceSettings.R;
-import com.colt.device.DeviceSettings.SuShell;
-import com.colt.device.DeviceSettings.SuTask;
-import com.colt.device.DeviceSettings.thermal.ThermalActivity;
-
 
 public class DeviceSettings extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -80,8 +75,6 @@ public class DeviceSettings extends PreferenceFragment
     private VibratorCallStrengthPreference mVibratorCallStrength;
     public static final String KEY_NOTIF_VIBSTRENGTH = "vib_notif_strength";
     private VibratorNotifStrengthPreference mVibratorNotifStrength;
-    
-    private static final String PREF_THERMAL_PROFILES = "thermal_profiles";
 
     private static TwoStatePreference mHBMModeSwitch;
     private static TwoStatePreference mAutoHBMSwitch;
@@ -94,7 +87,6 @@ public class DeviceSettings extends PreferenceFragment
     private CustomSeekBarPreference mMicrophoneGain;
     private CustomSeekBarPreference mEarpieceGain;
     private CustomSeekBarPreference mSpeakerGain;
-    private Preference mThermalProfiles;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -166,12 +158,6 @@ public class DeviceSettings extends PreferenceFragment
         mSpeakerGain = (CustomSeekBarPreference) findPreference(PREF_SPEAKER_GAIN);
         mSpeakerGain.setOnPreferenceChangeListener(this);
 
-        mThermalProfiles = (Preference)findPreference(PREF_THERMAL_PROFILES);
-        mThermalProfiles.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(getActivity().getApplicationContext(), ThermalActivity.class);
-            startActivity(intent);
-            return true;
-        });
     }
 
     @Override
