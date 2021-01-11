@@ -34,7 +34,7 @@
     <string name="config_fpsInfoSysNode" translatable="false">/sys/class/drm/sde-crtc-0/measured_fps</string>
 
     <!-- Whether device supports an alt. ambient display -->
-    <bool name="config_alt_ambient_display">false</bool>
+    <bool name="config_alt_ambient_display">true</bool>
 
     <!-- Whether the always on display mode is available. -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
