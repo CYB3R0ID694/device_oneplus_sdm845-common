@@ -270,3 +270,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/system_ext/etc/permissions/privapp-permissions-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-system_ext.xml \
    $(LOCAL_PATH)/permissions/privapp-permissions-googlcam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-googlecam.xml
+
+# Blur
+TARGET_USES_BLUR := true
