@@ -10,7 +10,3 @@ allow init {
 
 # Allow init to write to otg_switch
 allow init sysfs_usb_supply:file w_file_perms;
-
-# Allow init to get attributes for firmware
-#allow init firmware_file:filesystem getattr;
-#allow init bt_firmware_file:filesystem getattr;
