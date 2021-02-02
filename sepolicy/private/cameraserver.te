@@ -1,1 +1,0 @@
-allow cameraserver cherish_data_file:file { getattr open write };
