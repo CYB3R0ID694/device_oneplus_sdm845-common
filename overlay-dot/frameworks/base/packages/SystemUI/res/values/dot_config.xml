@@ -26,4 +26,9 @@
 
     <!-- The CPU temperature divider, if needed -->
     <integer name="config_cpuTempDivider" translatable="false">1000</integer>
+
+    <!-- Set to false for middle camera cutout devices
+         If the result doesn't satisfy you, play with
+         quick_qs_offset_height and quick_qs_total_height -->
+    <bool name="qs_enable_cutout_space">false</bool>
 </resources>
