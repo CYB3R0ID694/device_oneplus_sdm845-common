@@ -1,1 +1,1 @@
-allow cameraserver lineage_data_file:file { getattr open write };
+#allow cameraserver colt_data_file:file { getattr open write };
