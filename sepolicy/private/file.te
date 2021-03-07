@@ -18,4 +18,3 @@ type sysfs_usb_supply, sysfs_type, fs_type;
 # data
 type display_misc_file, file_type, data_file_type, core_data_file_type;
 
-#type colt_data_file, file_type, data_file_type,  core_data_file_type;
