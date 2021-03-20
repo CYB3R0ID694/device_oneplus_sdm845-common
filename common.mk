@@ -26,7 +26,7 @@ $(call inherit-product, vendor/addons/oneplus/apps/config.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-colt
+    $(LOCAL_PATH)/overlay-yaap
 
 PRODUCT_PACKAGES += \
     OnePlusIconShapeCircleOverlay \
