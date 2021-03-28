@@ -125,13 +125,13 @@
 
         <org.dot.device.DeviceSettings.preferences.VibratorCallStrengthPreference
             android:key="vib_call_strength"
-            android:icon="@drawable/ic_vibration_icon"
+            android:icon="@drawable/ic_call_icon"
             android:title="@string/vib_call_strength_title_head"
             android:summary="@string/vib_call_strength_summary_head" />
 
         <org.dot.device.DeviceSettings.preferences.VibratorNotifStrengthPreference
             android:key="vib_notif_strength"
-            android:icon="@drawable/ic_vibration_icon"
+            android:icon="@drawable/ic_notification_icon"
             android:title="@string/vib_notif_strength_title_head"
             android:summary="@string/vib_notif_strength_summary_head" />
           
