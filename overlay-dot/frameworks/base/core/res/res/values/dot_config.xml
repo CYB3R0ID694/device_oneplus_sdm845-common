@@ -20,12 +20,14 @@
     <string-array name="config_deviceKeyHandlerLibs" translatable="false">
         <item>/system/priv-app/TouchGestures/TouchGestures.apk</item>
         <item>/system/priv-app/DeviceSettings/DeviceSettings.apk</item>
+        <item>/system/priv-app/DeviceSettings/DeviceSettings.apk</item>
     </string-array>
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
         <item>com.android.touch.gestures.KeyHandler</item>
         <item>org.dot.device.DeviceSettings.KeyHandler</item>
+        <item>org.dot.device.DeviceSettings.TouchKeyHandler</item>
     </string-array>
 
     <!-- Whether device has physical tri state switch -->

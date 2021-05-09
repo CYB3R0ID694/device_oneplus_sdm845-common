@@ -50,6 +50,16 @@
         </Preference>
 
         <Preference
+            android:key="touchscreen_gesture_category"
+            android:title="@string/touchscreen_gesture_settings_title"
+            android:summary="@string/touchscreen_gesture_settings_summary"
+            android:persistent="false" >
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="dot.org.device.DeviceSettings"
+                    android:targetClass="dot.org.device.DeviceSettings.TouchscreenGestureSettings" />
+        </Preference>
+
+        <Preference
             android:icon="@drawable/ic_info_outline_24dp"
             android:persistent="false"
             android:summary="@string/hbm_mode_warning" />

@@ -25,8 +25,9 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
-    <protected-broadcast android:name=">org.dot.device.DeviceSettings.UPDATE_SLIDER_POSITION" />
+    <protected-broadcast android:name="org.dot.device.DeviceSettings.UPDATE_SLIDER_POSITION" />
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
+	<protected-broadcast android:name="org.dot.device.DeviceSettings.UPDATE_SETTINGS" />
 
     <uses-sdk
         android:minSdkVersion="24" />
@@ -68,6 +69,12 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".TouchscreenGestureSettings"
+            android:label="@string/touchscreen_gesture_settings_title"
+            android:theme="@style/AppTheme">
         </activity>
 
         <receiver android:name="org.dot.device.DeviceSettings.Startup" >
