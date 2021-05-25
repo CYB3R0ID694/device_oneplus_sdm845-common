@@ -106,9 +106,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/bluetooth/component-overrides_qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/component-overrides.xml
 	
-#GCam Permissions
+#Camera Permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/permissions/privapp-permissions-googlecamera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-googlecamera.xml
+    $(LOCAL_PATH)/prebuilt/permissions/privapp-permissions-googlecamera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-googlecamera.xml \
+    $(LOCAL_PATH)/configs/whitelist/hiddenapi-package-whitelist-oneplus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hiddenapi-package-whitelist-oneplus.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-oneplus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-oneplus.xml
 
 # Common init scripts
 PRODUCT_PACKAGES += \
