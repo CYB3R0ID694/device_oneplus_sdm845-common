@@ -25,7 +25,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
-    <protected-broadcast android:name=">org.dot.device.DeviceSettings.UPDATE_SLIDER_POSITION" />
+    <protected-broadcast android:name="org.dot.device.DeviceSettings.UPDATE_SLIDER_POSITION" />
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
 
     <uses-sdk
