@@ -15,7 +15,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           android:sharedUserId="android.uid.system"
-          package="org.dot.device.DeviceSettings"
+          package="org.wave.device.DeviceSettings"
           android:versionCode="4"
           android:versionName="4.0" >
 
@@ -25,7 +25,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
-    <protected-broadcast android:name="org.dot.device.DeviceSettings.UPDATE_SLIDER_POSITION" />
+    <protected-broadcast android:name="org.wave.device.DeviceSettings.UPDATE_SLIDER_POSITION" />
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
 
     <uses-sdk
@@ -60,7 +60,7 @@
         <activity android:name=".KeyHandler" />
 
         <activity
-            android:name="org.dot.device.DeviceSettings.PanelSettingsActivity"
+            android:name="org.wave.device.DeviceSettings.PanelSettingsActivity"
             android:exported="true"
             android:label="@string/panel_category_title"
             android:launchMode="singleTask" >
@@ -70,14 +70,14 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name="org.dot.device.DeviceSettings.Startup" >
+        <receiver android:name="org.wave.device.DeviceSettings.Startup" >
             <intent-filter android:priority="100" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
         <activity
-            android:name="org.dot.device.DeviceSettings.doze.DozeSettingsActivity"
+            android:name="org.wave.device.DeviceSettings.doze.DozeSettingsActivity"
             android:exported="true"
             android:label="@string/ambient_display_title"
             android:launchMode="singleTask" >
@@ -89,7 +89,7 @@
 
         <!-- DeviceSettings Tile -->
         <service
-            android:name="org.dot.device.DeviceSettings.DeviceSettingsTileService"
+            android:name="org.wave.device.DeviceSettings.DeviceSettingsTileService"
             android:icon="@drawable/ic_settings_device"
             android:label="@string/device_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -101,7 +101,7 @@
 
         <!-- Panel Mode's tile -->
         <service
-            android:name="org.dot.device.DeviceSettings.PanelModeTileService"
+            android:name="org.wave.device.DeviceSettings.PanelModeTileService"
             android:icon="@drawable/ic_panel_tile"
             android:label="@string/tile_panel_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -113,7 +113,7 @@
 
         <!-- HBM tile -->
         <service
-            android:name="org.dot.device.DeviceSettings.HBMModeTileService"
+            android:name="org.wave.device.DeviceSettings.HBMModeTileService"
             android:icon="@drawable/ic_hbm_tile"
             android:label="@string/tile_hbm_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -124,11 +124,11 @@
         </service>
 
         <!-- Auto HBM service -->
-        <service android:name="org.dot.device.DeviceSettings.AutoHBMService" />
+        <service android:name="org.wave.device.DeviceSettings.AutoHBMService" />
 
         <!-- DC-Dimming tile -->
         <service
-            android:name="org.dot.device.DeviceSettings.DCModeTileService"
+            android:name="org.wave.device.DeviceSettings.DCModeTileService"
             android:icon="@drawable/ic_dc_tile"
             android:label="@string/tile_dc_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -152,7 +152,7 @@
 
         <!-- Doze tile -->
         <service
-            android:name="org.dot.device.DeviceSettings.doze.DozeTileService"
+            android:name="org.wave.device.DeviceSettings.doze.DozeTileService"
             android:icon="@drawable/ic_eye"
             android:label="@string/ambient_display_gestures_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -163,18 +163,18 @@
         </service>
 
         <!-- FPS info service -->
-        <service android:name="org.dot.device.DeviceSettings.FPSInfoService"
+        <service android:name="org.wave.device.DeviceSettings.FPSInfoService"
                 android:exported="false">
         </service>
 
-        <service android:name="org.dot.device.DeviceSettings.doze.DozeService"
+        <service android:name="org.wave.device.DeviceSettings.doze.DozeService"
                  android:permission="OneplusDozeService">
         </service>
 
         <!-- Search Provider -->
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
-            android:authorities="org.dot.device"
+            android:authorities="org.wave.device"
             android:multiprocess="false"
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"
@@ -186,7 +186,7 @@
         
         <!-- Log Tile -->
         <service
-            android:name="org.dot.device.DeviceSettings.LogTile"
+            android:name="org.wave.device.DeviceSettings.LogTile"
             android:icon="@drawable/ic_qs_log"
             android:label="@string/quick_settings_log_tile_label"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
