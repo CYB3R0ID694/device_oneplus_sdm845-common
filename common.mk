@@ -26,7 +26,7 @@ endif
 $(call inherit-product, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
 
 # Inherit packages from vendor/addons/oneplus/apps
-$(call inherit-product, vendor/addons/oneplus/apps/config.mk)
+#$(call inherit-product, vendor/addons/oneplus/apps/config.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -210,11 +210,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
-
-# Touch
-PRODUCT_PACKAGES += \
-    lineage.touch@1.0-service.oneplus_sdm845 \
-    TouchGestures
 
 # tri-state-key
 PRODUCT_PACKAGES += \
