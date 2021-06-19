@@ -98,6 +98,10 @@ PRODUCT_PACKAGES += \
     GCam \
     libcvface_api \
     libqti-perfd-client
+	
+#GCam Permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/permissions/privapp-permissions-googlecamera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-googlecamera.xml
 
 # Common init scripts
 PRODUCT_PACKAGES += \
