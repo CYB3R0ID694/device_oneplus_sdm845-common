@@ -209,7 +209,7 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    device/oneplus/common
+    device/oneplus/sdm845-common/interfaces
 
 # Sounds
 PRODUCT_PRODUCT_PROPERTIES += \
