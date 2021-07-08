@@ -110,9 +110,9 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.0 \
     vendor.display.config@2.0
 
-# Doze
+# DeviceSettings
 PRODUCT_PACKAGES += \
-    OnePlusDoze
+    DeviceSettings
 
 # Default Sounds
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -213,7 +213,6 @@ PRODUCT_PACKAGES += \
 
 # tri-state-key
 PRODUCT_PACKAGES += \
-    KeyHandler \
     tri-state-key_daemon
 
 
