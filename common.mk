@@ -28,7 +28,7 @@ $(call inherit-product, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-havoc
 
 PRODUCT_PACKAGES += \
     OdmOverlay-OPSystemUI \
@@ -176,7 +176,8 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
+	device/oneplus/common
+   
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
@@ -199,9 +200,6 @@ PRODUCT_PACKAGES += \
     KeyHandler \
     tri-state-key_daemon
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    lineage.trust@1.0-service
 
 # Update engine
 PRODUCT_PACKAGES += \
