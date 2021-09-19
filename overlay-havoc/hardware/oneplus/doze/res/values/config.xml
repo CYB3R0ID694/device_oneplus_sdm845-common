@@ -16,5 +16,4 @@
     <!-- Sensor types -->
     <string name="pickup_sensor_type">oneplus.sensor.pickup</string>
     <string name="pocket_sensor_type">oneplus.sensor.pocket</string>
-
 </resources>
