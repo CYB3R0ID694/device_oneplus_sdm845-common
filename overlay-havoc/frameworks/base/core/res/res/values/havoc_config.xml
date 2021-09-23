@@ -72,11 +72,17 @@
          2: gestures only for back, home and overview -->
     <integer name="config_navBarInteractionMode">2</integer>
 
-    <!-- Adaptive Charging sysfs node & value for suspend/resume charging-->
+    <!-- Adaptive Charging support-->
      <bool name="config_supportAdaptiveCharging">true</bool>
-    <string name="config_adaptiveChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
-    <string name="config_adaptiveChargingSupspendValue" translatable="false">1</string>
-    <string name="config_adaptiveChargingResumeValue" translatable="false">0</string>
+      
+    <!-- Adaptive charging -->
+    <integer name="config_adaptiveChargingCutoffLevel">80</integer>
+    <integer name="config_adaptiveChargingResumeLevel">60</integer>
+    <integer name="config_adaptiveChargingCutoffTemperature">40</integer>
+    <integer name="config_adaptiveChargingResumeTemperature">30</integer>
+    <string name="config_adaptiveChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/charging_enabled</string>
+    <string name="config_adaptiveChargingSuspendValue" translatable="false">0</string>
+    <string name="config_adaptiveChargingResumeValue" translatable="false">1</string>
     
      <!-- The default tiles to display in QuickSettings -->
     <string name="quick_settings_tiles_extra" translatable="true">
