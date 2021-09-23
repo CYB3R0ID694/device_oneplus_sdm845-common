@@ -48,9 +48,6 @@ import androidx.preference.TwoStatePreference;
 import org.havoc.device.DeviceSettings.FileUtils;
 import org.havoc.device.DeviceSettings.doze.DozeSettingsActivity;
 import org.havoc.device.DeviceSettings.preferences.ProperSeekBarPreference;
-import org.havoc.device.DeviceSettings.preferences.VibratorCallStrengthPreference;
-import org.havoc.device.DeviceSettings.preferences.VibratorNotifStrengthPreference;
-import org.havoc.device.DeviceSettings.preferences.VibratorStrengthPreference;
 
 public class DeviceSettings extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -65,12 +62,6 @@ public class DeviceSettings extends PreferenceFragment
     public static final String KEY_FPS_INFO = "fps_info";
     public static final String KEY_MUTE_MEDIA = "mute_media";
  
-    public static final String KEY_VIBSTRENGTH = "vib_strength";
-    private VibratorStrengthPreference mVibratorStrength;
-    public static final String KEY_CALL_VIBSTRENGTH = "vib_call_strength";
-    private VibratorCallStrengthPreference mVibratorCallStrength;
-    public static final String KEY_NOTIF_VIBSTRENGTH = "vib_notif_strength";
-    private VibratorNotifStrengthPreference mVibratorNotifStrength;
     private static final String PREF_DOZE = "advanced_doze_settings";
     public static final String KEY_SETTINGS_PREFIX = "device_setting_";
 
@@ -97,15 +88,6 @@ public class DeviceSettings extends PreferenceFragment
 
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this.getContext());
 
-        mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
-        if (mVibratorStrength != null)
-            mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
-        mVibratorCallStrength = (VibratorCallStrengthPreference) findPreference(KEY_CALL_VIBSTRENGTH);
-        if (mVibratorCallStrength != null)
-            mVibratorCallStrength.setEnabled(VibratorCallStrengthPreference.isSupported());
-        mVibratorNotifStrength = (VibratorNotifStrengthPreference) findPreference(KEY_NOTIF_VIBSTRENGTH);
-        if (mVibratorNotifStrength != null)
-            mVibratorNotifStrength.setEnabled(VibratorNotifStrengthPreference.isSupported());
 
         mHBMModeSwitch = (TwoStatePreference) findPreference(KEY_HBM_SWITCH);
         mHBMModeSwitch.setEnabled(HBMModeSwitch.isSupported());

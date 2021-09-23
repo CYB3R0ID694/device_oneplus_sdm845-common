@@ -25,9 +25,7 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import androidx.preference.PreferenceManager;
 
-import org.havoc.device.DeviceSettings.preferences.VibratorCallStrengthPreference;
-import org.havoc.device.DeviceSettings.preferences.VibratorNotifStrengthPreference;
-import org.havoc.device.DeviceSettings.preferences.VibratorStrengthPreference;
+
 
 public class Startup extends BroadcastReceiver {
 
@@ -36,9 +34,6 @@ public class Startup extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, final Intent bootintent) {
 
-        VibratorStrengthPreference.restore(context);
-        VibratorCallStrengthPreference.restore(context);
-        VibratorNotifStrengthPreference.restore(context);
 
         boolean enabled = false;
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
