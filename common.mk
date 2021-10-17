@@ -25,8 +25,6 @@ endif
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
 
-# Inherit packages from vendor/addons/oneplus/apps
-$(call inherit-product, vendor/addons/oneplus/apps/config.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -193,7 +191,7 @@ PRODUCT_BOOT_JARS += \
     oneplus-fwk
 
 # OnePlus Camera
-$(call inherit-product-if-exists, packages/apps/OnePlusCamera/config.mk)
+$(call inherit-product, vendor/addons/oneplus/apps/config.mk)
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/OnePlusCamera/hiddenapi-package-whitelist-oneplus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hiddenapi-package-whitelist-oneplus.xml \
