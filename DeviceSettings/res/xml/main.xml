@@ -15,7 +15,7 @@
         android:key="slider"
         android:title="@string/slider_title">
 
-        <com.havoc.support.preferences.SwitchPreference
+        <org.dot.support.preferences.SwitchPreference
             android:key="mute_media"
             android:icon="@drawable/ic_audio_media"
             android:title="@string/mute_media_title"
@@ -27,7 +27,7 @@
         android:key="graphics"
         android:title="@string/display_title">
 
-        <com.havoc.support.preferences.SwitchPreference
+        <org.dot.support.preferences.SwitchPreference
             android:key="auto_hbm"
             android:icon="@drawable/ic_autohbm_icon"
             android:summary="@string/auto_hbm_summary"
@@ -39,13 +39,13 @@
             android:title="@string/auto_hbm_threshold_title"
             android:summary="@string/auto_hbm_threshold_summary" />
 
-        <com.havoc.support.preferences.SwitchPreference
+        <org.dot.support.preferences.SwitchPreference
             android:key="hbm"
             android:icon="@drawable/ic_hbm_icon"
             android:summary="@string/hbm_mode_summary"
             android:title="@string/hbm_mode_title" />
 
-       <com.havoc.support.preferences.SwitchPreference
+       <org.dot.support.preferences.SwitchPreference
             android:key="dc"
             android:icon="@drawable/ic_dc_icon"
             android:summary="@string/dc_mode_summary"
@@ -99,7 +99,7 @@
         android:key="fps"
         android:title="@string/fps_title">
 
-        <com.havoc.support.preferences.SwitchPreference
+        <org.dot.support.preferences.SwitchPreference
             android:key="fps_info"
             android:icon="@drawable/ic_fps_icon"
             android:title="@string/fps_info_title"

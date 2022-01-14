@@ -18,7 +18,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           android:sharedUserId="android.uid.system"
-          package="org.havoc.device.DeviceSettings"
+          package="org.dot.device.DeviceSettings"
           android:versionCode="2"
           android:versionName="2.0" >
 
@@ -60,7 +60,7 @@
 
         <activity android:name=".DeviceSettings" />
 
-        <receiver android:name="org.havoc.device.DeviceSettings.Startup" >
+        <receiver android:name="org.dot.device.DeviceSettings.Startup" >
             <intent-filter android:priority="100" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
@@ -68,7 +68,7 @@
 
         <!-- DeviceSettings Tile -->
         <service
-            android:name="org.havoc.device.DeviceSettings.DeviceSettingsTileService"
+            android:name="org.dot.device.DeviceSettings.DeviceSettingsTileService"
             android:icon="@drawable/ic_settings_device"
             android:label="@string/device_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -80,7 +80,7 @@
 
         <!-- DC-Dimming Tile -->
         <service
-            android:name="org.havoc.device.DeviceSettings.DCModeTileService"
+            android:name="org.dot.device.DeviceSettings.DCModeTileService"
             android:icon="@drawable/ic_dimming_off_icon"
             android:label="@string/tile_dc_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -92,7 +92,7 @@
 
         <!-- DozeSettings Activity -->
         <activity
-            android:name="org.havoc.device.DeviceSettings.doze.DozeSettingsActivity"
+            android:name="org.dot.device.DeviceSettings.doze.DozeSettingsActivity"
             android:exported="true"
             android:label="@string/ambient_display_title"
             android:launchMode="singleTask" >
@@ -104,7 +104,7 @@
 
         <!-- Doze Tile -->
         <service
-            android:name="org.havoc.device.DeviceSettings.doze.DozeTileService"
+            android:name="org.dot.device.DeviceSettings.doze.DozeTileService"
             android:icon="@drawable/ic_doze_icon"
             android:label="@string/ambient_display_gestures_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -115,7 +115,7 @@
         </service>
 
         <!-- Doze Service -->
-        <service android:name="org.havoc.device.DeviceSettings.doze.DozeService"
+        <service android:name="org.dot.device.DeviceSettings.doze.DozeService"
                  android:permission="OneplusDozeService">
         </service>
 
@@ -132,13 +132,13 @@
         </service>
 
         <!-- FPS Info Service -->
-        <service android:name="org.havoc.device.DeviceSettings.FPSInfoService"
+        <service android:name="org.dot.device.DeviceSettings.FPSInfoService"
                 android:exported="false">
         </service>
 
         <!-- HBM Tile -->
         <service
-            android:name="org.havoc.device.DeviceSettings.HBMModeTileService"
+            android:name="org.dot.device.DeviceSettings.HBMModeTileService"
             android:icon="@drawable/ic_hbm_icon"
             android:label="@string/tile_hbm_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -149,15 +149,15 @@
         </service>
 
         <!-- HBM Service -->
-        <service android:name="org.havoc.device.DeviceSettings.HBMModeService"
+        <service android:name="org.dot.device.DeviceSettings.HBMModeService"
             android:exported="false" />
 
         <!-- Auto HBM Service -->
-        <service android:name="org.havoc.device.DeviceSettings.AutoHBMService" />
+        <service android:name="org.dot.device.DeviceSettings.AutoHBMService" />
 
         <!-- PanelSettings Activity -->
         <activity
-            android:name="org.havoc.device.DeviceSettings.PanelSettingsActivity"
+            android:name="org.dot.device.DeviceSettings.PanelSettingsActivity"
             android:exported="true"
             android:label="@string/panel_category_title"
             android:launchMode="singleTask" >
@@ -169,7 +169,7 @@
 
         <!-- Panel Mode's Tile -->
         <service
-            android:name="org.havoc.device.DeviceSettings.PanelModeTileService"
+            android:name="org.dot.device.DeviceSettings.PanelModeTileService"
             android:icon="@drawable/ic_colours_icon"
             android:label="@string/tile_panel_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -181,7 +181,7 @@
 
         <!-- Log Tile -->
         <service
-            android:name="org.havoc.device.DeviceSettings.LogTile"
+            android:name="org.dot.device.DeviceSettings.LogTile"
             android:icon="@drawable/ic_log_icon"
             android:label="@string/quick_settings_log_tile_label"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -194,7 +194,7 @@
         <!-- Search Provider -->
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
-            android:authorities="org.havoc.device"
+            android:authorities="org.dot.device"
             android:multiprocess="false"
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"
